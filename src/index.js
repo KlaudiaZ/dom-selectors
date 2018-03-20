@@ -63,3 +63,13 @@ window.setAllBgColors = () => {
     window.setWantedBgColor('predator', 'orange');
     window.setWantedBgColor('other', 'red');
 }
+
+
+cloneHeader = (amount) => {
+    body = document.querySelector('body');
+    header = document.querySelector('h1');
+    for (let i = 0; i < amount; i++) {
+        body.insertBefore(header.cloneNode(true), header);
+        body.append(header.cloneNode(true));
+    }
+}
